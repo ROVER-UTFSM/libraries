@@ -16,6 +16,9 @@ private:
     const unsigned int nsize;
 
 public:
+    buffer_ring(){
+        buffer_ring(1);
+    }
     buffer_ring(unsigned int size){
         nsize = size;
         index = 0, end_index = 0;
