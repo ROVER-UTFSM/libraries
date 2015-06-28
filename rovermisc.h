@@ -14,7 +14,7 @@ int wait(unsigned int useconds){
     sleep.tv_sec = 0;
     sleep.tv_nsec = useconds*1000;
 
-    return nsleep(sleep);
+    return nanosleep(&sleep, &sleep);
 }
 
 }

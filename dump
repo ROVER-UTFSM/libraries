@@ -1,0 +1,7 @@
+/tmp/ccIt736l.o: In function `rover::remote_command::remote_command()':
+joystick.cpp:(.text._ZN5rover14remote_commandC2Ev[_ZN5rover14remote_commandC5Ev]+0xf): undefined reference to `vtable for rover::remote_command'
+/tmp/ccIt736l.o: In function `rover::remote_command::~remote_command()':
+joystick.cpp:(.text._ZN5rover14remote_commandD2Ev[_ZN5rover14remote_commandD5Ev]+0xf): undefined reference to `vtable for rover::remote_command'
+/tmp/ccIt736l.o:(.rodata._ZTVN5rover8joystickE[_ZTVN5rover8joystickE]+0x10): undefined reference to `rover::remote_command::get_command(rover::command_t&)'
+/tmp/ccIt736l.o:(.rodata._ZTIN5rover8joystickE[_ZTIN5rover8joystickE]+0x10): undefined reference to `typeinfo for rover::remote_command'
+collect2: error: ld returned 1 exit status
