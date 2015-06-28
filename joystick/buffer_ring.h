@@ -2,23 +2,26 @@
 #define BUFFER_RING
 
 #include <vector>
+#include <cstring>
 
 //TODO: Optimization in case size is 1 (template matching)
 
 namespace rover{
 
-template<class X>
+template<typename X>
 class buffer_ring{
 private:
     std::vector<X> ring;
-    unsigned int   index;
-    const unsigned int size;
+    unsigned int   index, end_index;
+    const unsigned int nsize;
 
 public:
     buffer_ring(unsigned int size){
-        this->size = size;
+        nsize = size;
+        index = 0, end_index = 0;
 
         ring.resize(size);
+        std::fill(ring.begin(), ring.end(), 0);
     }
     ~buffer_ring(){}
 
