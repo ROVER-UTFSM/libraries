@@ -13,17 +13,15 @@ bool joystick::opened(){
 bool joystick::get_command(command_t &c){
 	js_event event;
 	int bytes = read(fp, &event, sizeof(js_event));
-	
-	std::cout << "Me!\n";
 
 
-	//if(bytes != sizeof(js_event))
+	if(bytes != sizeof(js_event))
 		return false;
 
 	
-	//std::cout << "Type :" << event.type << "number: " << event.number << "value: " << event.value << "\n";
+	std::cout << "Type :" << event.type << "number: " << event.number << "value: " << event.value << "\n";
 
-	//return true;
+	return true;
 }
 
-#endif // __linux__
+#endif //__linux__
