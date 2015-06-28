@@ -1,5 +1,5 @@
-#ifndef ROVERMISC
-#define ROVERMISC
+#ifndef __ROVERMISC_H_
+#define __ROVERMISC_H_
 
 #ifdef __linux__
 
@@ -21,5 +21,14 @@ int wait(unsigned int useconds){
 
 #endif // __linux__
 
+#ifdef __MINGW32__
+
+//#include
+
+namespace rover{
+// ...
+}
+
+#endif // __MINGW32__
 
 #endif // ROVERMISC
