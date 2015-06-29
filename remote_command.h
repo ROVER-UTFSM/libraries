@@ -5,7 +5,7 @@
 namespace rover{
 	
 	typedef enum {
-		EXIT, VEL_R, VEL_A
+		EXIT_COMMAND, VEL_R_COMMAND, VEL_A_COMMAND
 	} command_type_t;
 
 	typedef struct {
