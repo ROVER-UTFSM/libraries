@@ -48,8 +48,8 @@ namespace rover{
     class command{
 
     public:
-        remote_command(){}
-        virtual ~remote_command(){}
+        command(){}
+        virtual ~command(){}
 
         virtual bool get_command(command_t &c) = 0;     // False for no or incorrect command. True otherwise.
     };
