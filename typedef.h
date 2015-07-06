@@ -28,7 +28,7 @@ namespace rover{
     /**
      * Uses the Command pattern to generate from each input equivalences to the Rover's instructions.
      */
-    class remote_command{
+    class command{
 
     public:
         remote_command(){}

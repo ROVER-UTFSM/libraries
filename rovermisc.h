@@ -8,7 +8,7 @@
 
 namespace rover{
 
-int wait(unsigned int useconds);
+	int wait(unsigned int useconds);
 
 }
 

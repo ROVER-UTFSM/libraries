@@ -21,29 +21,29 @@ namespace rover{
 
 #ifdef __linux__
 
-class joystick: public remote_command{
-private:
-	int fp;
-	const unsigned int sample_period = 5000;
+	class joystick: public command{
+	private:
+		int fp;
+		const unsigned int sample_period = 5000;
 
-public:
-	joystick():
-		joystick("/dev/input/js0")
-		{}							// Ojo! compilar con -std=c++11, si no llamar otro constructor!!
-	joystick(std::string s):
-		remote_command()
-		{
-		fp = open(s.c_str(), O_RDONLY | O_NONBLOCK);
-	}
-	~joystick(){
-		close(fp);
-	}
+	public:
+		joystick():
+			joystick("/dev/input/js0")
+			{}							// Ojo! compilar con -std=c++11, si no llamar otro constructor!!
+		joystick(std::string s):
+			remote_command()
+			{
+			fp = open(s.c_str(), O_RDONLY | O_NONBLOCK);
+		}
+		~joystick(){
+			close(fp);
+		}
 
-	bool opened();
-	bool get_command(command_t &c);
+		bool opened();
+		bool get_command(command_t &c);
 
-	void test();
-};
+		void test();
+	};
 
 #endif // __linux__
 
