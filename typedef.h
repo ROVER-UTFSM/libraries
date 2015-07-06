@@ -18,6 +18,11 @@ namespace rover{
         float a;
     };
 
+    struct carte_vec_t{
+        float x;
+        float y;
+    };
+
 
     struct command_t{
         command_type_t  type;
