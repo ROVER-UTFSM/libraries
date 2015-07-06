@@ -30,15 +30,14 @@ namespace rover{
 			joystick("/dev/input/js0")
 			{}							// Ojo! compilar con -std=c++11, si no llamar otro constructor!!
 		joystick(std::string s):
-			remote_command()
-			{
+			command(){
 			fp = open(s.c_str(), O_RDONLY | O_NONBLOCK);
 		}
 		~joystick(){
 			close(fp);
 		}
 
-		bool opened();
+		bool failed();
 		bool get_command(command_t &c);
 
 		void test();

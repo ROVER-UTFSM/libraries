@@ -1,16 +1,21 @@
 #include <stdio.h>
 
-#include "../remote_command.h"
+#include "../typedef.h"
 #include "../joystick.h"
 #include "../rovermisc.h"
 
 int main(int argc, char *argv[]){
-	rover::remote_command *Joystick = new rover::joystick();
+	rover::command *Joystick = new rover::joystick();
 	rover::command_t command;
 
 
 	//Rover State
 	int tvel = 0, avel = 0;
+
+	if( ((rover::joystick*)Joystick)->failed() ){
+		printf("No se encontro joystick\n");
+		return -1;
+	}
 
 	while(1){
 		if(Joystick->get_command(command)){

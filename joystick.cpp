@@ -5,12 +5,12 @@ using namespace rover;
 
 #ifdef __linux__
 
-bool joystick::opened(){
+bool joystick::failed(){
 	return fp < 0;
 }
 
 /**
- * All this events are configured to be in red mode
+ * 
  * TODO: use other than the linux API
  */
 bool joystick::get_command(command_t &c){
