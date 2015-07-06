@@ -8,6 +8,10 @@
 
 namespace rover{
 
+	/*
+	 * Sólo implimentado en Linux por ahora.
+	 * @param useconds	Microsegundos a dormir.
+	 */
 	int wait(unsigned int useconds);
 
 }

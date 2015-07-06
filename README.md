@@ -14,8 +14,10 @@ typedef
 				- command
 				- vector2D
 
+
 joystick
 		Genera 'command_t' a partir de la API joystick.h de linux.	(sólo linux)
+
 
 rovermisc
 		Varias funciones multipropósito.
