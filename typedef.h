@@ -4,7 +4,7 @@
 
 namespace rover{
 
-    // Enum types
+    // Enum types ###############################
 
     /**
      * Enumeración de los comandos aceptados
@@ -14,10 +14,11 @@ namespace rover{
     } command_type_t;
 
 
-    // Struct types
+
+    // Struct types #############################
 
     /**
-     * Descripción de punto coordenadas polares
+     * Descripción de punto coordenadas polares.
      */
     struct polar_vec_t{
         float r;
@@ -25,7 +26,7 @@ namespace rover{
     };
 
     /**
-     * Descripción de punto coordenadas cartesianas
+     * Descripción de punto coordenadas cartesianas.
      */
     struct carte_vec_t{
         float x;
@@ -34,13 +35,15 @@ namespace rover{
 
 
     /**
-     * Comando universal. Su valor 'value' debe trabajarse normalizado en [-1.0, 1.0]
+     * Comando universal. Su valor 'value' debe trabajarse normalizado en [-1.0, 1.0].
      */
     struct command_t{
         command_type_t  type;
         float           value;
     };
 
+
+    // Classes types ############################
 
     /**
      * Uses the Command pattern to generate from each input equivalences to the Rover's instructions.

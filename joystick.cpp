@@ -9,10 +9,6 @@ bool joystick::failed(){
 	return fp < 0;
 }
 
-/**
- * 
- * TODO: use other than the linux API
- */
 bool joystick::get_command(command_t &c){
 	js_event event;
 
@@ -50,11 +46,8 @@ bool joystick::get_command(command_t &c){
 	return true;
 }
 
-/**
- * Little Linux API test
- */
 void joystick::test(){
-	js_event event;
+	js_event event;		// read event
 
 	while(1){
 		if(read(fp, &event, sizeof(js_event)) == sizeof(js_event))
