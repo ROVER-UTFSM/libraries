@@ -6,6 +6,9 @@ namespace rover{
 
     // Enum types
 
+    /**
+     * Enumeración de los comandos aceptados
+     */
     typedef enum {
         EXIT_COMMAND, VEL_R_COMMAND, VEL_A_COMMAND
     } command_type_t;
@@ -13,17 +16,26 @@ namespace rover{
 
     // Struct types
 
+    /**
+     * Descripción de punto coordenadas polares
+     */
     struct polar_vec_t{
         float r;
         float a;
     };
 
+    /**
+     * Descripción de punto coordenadas cartesianas
+     */
     struct carte_vec_t{
         float x;
         float y;
     };
 
 
+    /**
+     * Comando universal. Su valor 'value' debe trabajarse normalizado en [-1.0, 1.0]
+     */
     struct command_t{
         command_type_t  type;
         float           value;
@@ -42,6 +54,10 @@ namespace rover{
         virtual bool get_command(command_t &c) = 0;     // False for no or incorrect command. True otherwise.
     };
     
+    /**
+     * Agrupa 3 estados: posición, velocidad y aceleración (vectores polares). Sobreescribe los operadores para operar intuitivamente con
+     * otros 'vector2D'.
+     */
     class vector2D{
     private:
         polar_vec_t pos;
