@@ -1,8 +1,6 @@
 #ifndef __JOYSTICK_H__
 #define __JOYSTICK_H__
 
-#include "remote_command.h"
-
 #ifdef __linux__
 
 #include <fcntl.h>
@@ -12,6 +10,7 @@
 #include <iostream>
 #include <string>
 
+#include "typedef.h"
 #include "rovermisc.h"
 
 #endif // __linux__
