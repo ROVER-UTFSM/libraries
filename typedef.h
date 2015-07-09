@@ -89,14 +89,23 @@ namespace rover{
         polar_vec_t get_spd();
         polar_vec_t get_acc();
 
-        vector_state& operator+(polar_vec_t& v2D);
-        vector_state& operator+(vector_state& v);
+        vector_state& operator+(vector_state& vs);
+        vector_state& operator+(polar_vec_t &v);
         vector_state& operator+(float e);
-        vector_state& operator+(polar_vec_t& v2D);
-        vector_state& operator-(vector_state& v);
+        vector_state& operator-(vector_state& vs);
+        vector_state& operator-(polar_vec_t& v);
         vector_state& operator-(float e);
         vector_state& operator*(float e);
         vector_state& operator/(float e);
+
+        vector_state& operator+=(vector_state &v);
+        vector_state& operator+=(polar_vec_t &v);
+        vector_state& operator+=(float e);
+        vector_state& operator-=(vector_state &v);
+        vector_state& operator-=(polar_vec_t& v);
+        vector_state& operator-=(float e);
+        vector_state& operator*=(float e);
+        vector_state& operator/=(float e);
 
     };
 }
