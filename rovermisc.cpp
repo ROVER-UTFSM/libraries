@@ -4,7 +4,10 @@
 #ifdef __linux__
 
 
-
+/**
+ * Waits useconds microseconds
+ * @param useconds microseconds to be asleep
+ */
 int rover::wait(unsigned int useconds){
     //TODO: case useconds > 1[s].
 
