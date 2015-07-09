@@ -23,6 +23,20 @@ namespace rover{
     struct polar_vec_t{
         float r;
         float a;
+
+        polar_vec_t& operator+(polar_vec_t &v);
+        polar_vec_t& operator+(float e);
+        polar_vec_t& operator-(polar_vec_t &v);
+        polar_vec_t& operator-(float e);
+        polar_vec_t& operator*(float e);
+        polar_vec_t& operator/(float e);
+
+        polar_vec_t& operator+=(polar_vec_t &v);
+        polar_vec_t& operator+=(float e);
+        polar_vec_t& operator-=(polar_vec_t &v);
+        polar_vec_t& operator-=(float e);
+        polar_vec_t& operator*=(float e);
+        polar_vec_t& operator/=(float e);
     };
 
     /**

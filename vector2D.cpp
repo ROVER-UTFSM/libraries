@@ -2,6 +2,71 @@
 
 namespace rover{
 
+	// polar_vec_t implementation ###############
+
+	polar_vec_t& operator+(polar_vec_t &v){
+		this->r += v.r;
+		this->a += v.a;
+		return this;
+	}
+    polar_vec_t& operator+(float e){
+		this->r += e;
+		this->a += e;
+		return this;
+	}
+    polar_vec_t& operator-(polar_vec_t &v){
+		this->r -= v.r;
+		this->a -= v.a;
+		return this;
+	}
+    polar_vec_t& operator-(float e){
+		this->r -= e;
+		this->a -= e;
+		return this;
+	}
+    polar_vec_t& operator*(float e){
+    	this->r *= e;
+		this->a *= e;
+		return this;
+    }
+    polar_vec_t& operator/(float e){
+    	this->r /= e;
+		this->a /= e;
+		return this;
+	}
+	polar_vec_t& operator+=(polar_vec_t &v){
+		this->r += v.r;
+		this->a += v.a;
+		return this;
+	}
+    polar_vec_t& operator+=(float e){
+		this->r += e;
+		this->a += e;
+		return this;
+	}
+    polar_vec_t& operator-=(polar_vec_t &v){
+		this->r -= v.r;
+		this->a -= v.a;
+		return this;
+	}
+    polar_vec_t& operator-=(float e){
+		this->r -= e;
+		this->a -= e;
+		return this;
+	}
+	polar_vec_t& operator*=(float e){
+		this->r *= e;
+		this->a *= e;
+		return this;
+	}
+	polar_vec_t& operator/=(float e){
+		this->r /= e;
+		this->a /= e;
+		return this;
+	}
+
+	// vector_state implementation ##############
+
 	vector_state::vector_state():
 		pos.r(0.),
 		pos.a(0.),
@@ -9,7 +74,6 @@ namespace rover{
 		spd.a(0.),
 		acc.r(0.),
 		acc.a(0.){}
-	}
 
 	vector_state& vector_state::operator+(vector_state &v){
 		this->pos += v.pos;
