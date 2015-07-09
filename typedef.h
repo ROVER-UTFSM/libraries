@@ -59,28 +59,30 @@ namespace rover{
     
     /**
      * Agrupa 3 estados: posición, velocidad y aceleración (vectores polares). Sobreescribe los operadores para operar intuitivamente con
-     * otros 'vector2D'.
+     * otros 'vector_state'.
      */
-    class vector2D{
+    class vector_state{
     private:
         polar_vec_t pos;
         polar_vec_t spd;
         polar_vec_t acc;
 
     public:
-        vector2D();
-        ~vector2D(){}
+        vector_state();
+        ~vector_state(){}
 
         polar_vec_t get_pos();
         polar_vec_t get_spd();
         polar_vec_t get_acc();
 
-        polar_vec_t operator+(polar_vec_t);
-        polar_vec_t operator+(float);
-        polar_vec_t operator-(polar_vec_t);
-        polar_vec_t operator-(float);
-        polar_vec_t operator*(float);
-        polar_vec_t operator/(float);
+        vector_state& operator+(polar_vec_t& v2D);
+        vector_state& operator+(vector_state& v);
+        vector_state& operator+(float e);
+        vector_state& operator+(polar_vec_t& v2D);
+        vector_state& operator-(vector_state& v);
+        vector_state& operator-(float e);
+        vector_state& operator*(float e);
+        vector_state& operator/(float e);
 
     };
 }
