@@ -57,10 +57,10 @@ namespace rover{
     };
 
 
-    // Class types ############################
+    // Class types ##############################
 
     /**
-     * Uses the Command pattern to generate from each input equivalences to the Rover's instructions.
+     * Uses the Command pattern to generate from each input equivalences a Rover's instructions.
      */
     class command{
 
