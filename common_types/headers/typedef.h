@@ -11,7 +11,7 @@ namespace rover{
      */
     typedef enum {
         EXIT_COMMAND, VEL_R_COMMAND, VEL_A_COMMAND
-    } command_type_t;
+    } command_list_t;
 
 
 
@@ -60,7 +60,7 @@ namespace rover{
     // Class types ##############################
 
     /**
-     * Uses the Command pattern to generate from each input equivalences a Rover's instructions.
+     * Describe funcionalidad mínima de un comando
      */
     class command{
 

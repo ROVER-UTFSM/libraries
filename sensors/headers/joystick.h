@@ -10,8 +10,8 @@
 #include <iostream>
 #include <string>
 
-#include "typedef.h"
-#include "rovermisc.h"
+#include "../../common_types/typedef.h"
+#include "../../miscellaneous/rovermisc.h"
 
 #endif // __linux__
 
@@ -23,7 +23,7 @@ namespace rover{
 	class joystick: public command{
 	private:
 		int fp;
-		const unsigned int sample_period = 5000;
+		const unsigned int sample_period = 5000;	// no se usa aún
 
 	public:
 		/*
