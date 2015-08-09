@@ -52,7 +52,7 @@ namespace rover{
      * Comando universal. Su valor 'value' debe trabajarse normalizado en [-1.0, 1.0].
      */
     struct command_t{
-        command_type_t  type;
+        command_list_t  type;
         float           value;
     };
 
