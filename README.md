@@ -49,7 +49,7 @@ common_types
 
 
 
-TODO
+Descripciones
 ---------------------
 ---------------------
 
@@ -59,3 +59,11 @@ TODO
 	- chassis.h: recibe vector polar de velocidad y calcula la velocidad especifica para cada rueda.
 	- rover.h: agrupa todas las clases y adapta la cantidad de ruedas a cantidad de puentes H.
 	- implementacion main: agregar elementos por medio un vector(arreglo) y tener la incializacion de los objetos en un archivo aparte (XML?) 
+
+
+TODO
+-----
+-----
+
+	- Makefiles
+	- Documentación con objetivos corto plazo y presupuestos de *.cpp
