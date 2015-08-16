@@ -10,8 +10,8 @@
 #include <iostream>
 #include <string>
 
-#include "../../common_types/typedef.h"
-#include "../../miscellaneous/rovermisc.h"
+#include "typedef.h"
+#include "rovermisc.h"
 
 #endif // __linux__
 
