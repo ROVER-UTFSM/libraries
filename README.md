@@ -7,7 +7,7 @@ Introducción
 Rover es un proyecto estudiantil de la UTFSM. Se concentra en el armado, diseño y desarrollo de plataformas robóticas
 autónomas y controladas remotamente.
 
-Objeetivo
+Objetivo
 ----------
 
 Generar librería estática con lo necesario para describir una nueva plataforma.
