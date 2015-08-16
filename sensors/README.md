@@ -15,4 +15,6 @@ El diseño elegido en este branch es crear una clase Contructor_Plataformas(main
 	-XXX_sensor debe de convertir cualquier valor que devuelva a SI.
 	-En cualquiera de los casos el constructore debe ser minimalista. Cualquier parametro opcional al funcionamiento debe ser seteablo por el método (función en una clase, OO) correspondiente.
 
+Tanto Arduino como GPIO se desarrollarían en communications. Esto significa que para cualquier otro método de comunación, sólo en el caso que se envie información de un sensor "crudamente" (sin procesamiento previo), éste sensor heredará la clase preocupada de manejar la comunicación.
+
 La clase Contructor_Plataformas no es importante aquí.
