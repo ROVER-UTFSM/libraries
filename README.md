@@ -10,16 +10,16 @@ autónomas y controladas remotamente.
 Objetivo
 ----------
 
-Generar librería estática con lo necesario para describir una nueva plataforma.
+Programación de sensores, actuadores, drivers y librería estática con funcionalidad en común para los primeros tres objetibos.
 
 
 Objetivos corto plazo
 ----------------------
 
-- Reimplementar plataformas desarrolladas con una arquitectura única para todas y documentada.
-- Implementar sensores y actuadores (drivers y controladores(controllers)).
+- Reimplementar plataformas desarrolladas con una arquitectura única para todas.
+- Implementar sensores y actuadores (drivers).
 - Mediante sólo la descripción de una plataforma, o sea, al indicar que sensores, actuadores, controladores y
-comunicaciónes se utilizarán, obtener robótica funcional.
+comunicaciónes se utilizarán, obtener robót/plataforma funcional.
 
 
 Bibliotecas desarrolladas
