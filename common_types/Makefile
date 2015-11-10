@@ -12,9 +12,9 @@ OBJS  = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
 LIBS = 
 
-all : libtypedef.a
+all: libtypedef.a
 
-libtypedef.a : $(ODIR)/typedef.o
+libtypedef.a: $(ODIR)/typedef.o
 	$(AR) $(LDIR)/$@ $^
 	cp $(LDIR)/$@ ../sensors/libs/
 
