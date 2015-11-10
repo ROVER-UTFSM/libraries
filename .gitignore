@@ -1,1 +1,4 @@
+*.o*.a
 *.o
+sensors/bin/*
+.gitignore

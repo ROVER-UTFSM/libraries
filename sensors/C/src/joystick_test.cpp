@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#include "../../common_types/typedef.h"
-#include "../../headers/joystick.h"
-#include "../../miscellaneous/rovermisc.h"
+#include "typedef.h"
+#include "rovermisc.h"
+#include "../headers/joystick.h"
 
 int main(int argc, char *argv[]){
 	rover::command *Joystick = new rover::joystick();
