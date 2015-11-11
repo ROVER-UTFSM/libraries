@@ -18,7 +18,7 @@ class xl_maxsonar_ez2100:
 
 	def __inti__(self):
 		# constantes
-		self.__pin_number = 39						# RPi 2 !
+		self.__pin_number = 40						# RPi 2 !
 		self.__const_distance_factor = 0.000058		# datasheet
 
 		# variable de resultados 
