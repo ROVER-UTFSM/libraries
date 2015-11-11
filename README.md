@@ -4,7 +4,7 @@ Rover
 Introducción
 -------------
 
-Rover es un proyecto estudiantil de la UTFSM. Se concentra en el armado, diseño y desarrollo de plataformas robóticas
+Rover es un proyecto estudiantil de la UTFSM. Se enfoca en armado, diseño y desarrollo de plataformas robóticas
 autónomas y controladas remotamente.
 
 Objetivo
