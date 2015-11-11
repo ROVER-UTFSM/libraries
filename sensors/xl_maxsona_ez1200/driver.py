@@ -59,6 +59,6 @@ if __name__ == "__main__":
 
 	while 1:
 		time.sleep(1)
-		print("Medición: " + str(sonar.getDistance()) )
+		print("Medicion: " + str(sonar.getDistance()) )
 	
 	
