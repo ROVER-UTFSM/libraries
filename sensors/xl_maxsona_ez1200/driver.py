@@ -16,4 +16,5 @@ class xl_maxsonar_ez2100:
 
 
 if __name__ == "__main__":
+	gpio.setmode(GPIO.BCM)
 	print("Hi!")
