@@ -16,11 +16,11 @@ class xl_maxsonar_ez2100:
 
 	def __inti__(self):
 		# constantes
-		__pin_number = 31						# RPi 2 !
-		__const_distance_factor = 0.000058		# datasheet
+		self.__pin_number = 31						# RPi 2 !
+		self.__const_distance_factor = 0.000058		# datasheet
 
 		# variable de resultados 
-		_medicion = 0
+		self._medicion = 0
 
 		# seteo de pines
 		gpio.setup(__pin_number, gpio.IN, pull_up_down=gpio.PUD_UP)
@@ -42,10 +42,10 @@ class xl_maxsonar_ez2100:
 		gpio.wait_for_edge(31, gpio.RISING)
 
 		deltaT = time.time() - time0
-		medicion = deltaT / __const_distance_factor
+		self._medicion = deltaT / __const_distance_factor
 
 	def getDistance(self):
-		return _medicion
+		return self._medicion
 
 
 
