@@ -42,7 +42,7 @@ class xl_maxsonar_ez2100:
 		gpio.wait_for_edge(31, gpio.RISING)
 
 		deltaT = time.time() - time0
-		self._medicion = deltaT / __const_distance_factor
+		self._medicion = time_to_distance(deltaT)
 
 	def getDistance(self):
 		return self._medicion
