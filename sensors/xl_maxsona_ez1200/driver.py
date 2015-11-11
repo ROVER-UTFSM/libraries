@@ -44,7 +44,7 @@ class xl_maxsonar_ez2100:
 		deltaT = time.time() - time0
 		medicion = deltaT / __const_distance_factor
 
-	def getDistance():
+	def getDistance(self):
 		return _medicion
 
 
