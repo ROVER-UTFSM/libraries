@@ -66,13 +66,10 @@ class xl_maxsonar_ez2100:
 			# int() conversion problem
 			pass
 
-	def calibrate(self):
-		point = []
-		for i in range(1,10):
-			point.append(generate_data())
-
-		# mean-square
-
+	def print_data(self):
+		for x in xrange(1,10):
+			point = self.generate_data()
+			print(str(point[0]) + ", " + str(point[1]))
 
 
 if __name__ == "__main__":
