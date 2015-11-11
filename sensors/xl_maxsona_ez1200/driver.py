@@ -27,6 +27,8 @@ class xl_maxsonar_ez2100:
 		# seteo de pines
 		gpio.setup(__pin_number, gpio.IN, pull_up_down=gpio.PUD_UP)
 		gpio.add_event_detect(__pin_number, gpio.FALLING, callback=self.actualizar)	# add bounce time ?
+
+		print("1. done!")
 		
 
 	def time_to_distance(self, time):
@@ -44,6 +46,8 @@ class xl_maxsonar_ez2100:
 
 		deltaT = time.time() - time0
 		self._medicion = time_to_distance(deltaT)
+
+		print("refreshed!")
 
 	def getDistance(self):
 		return self._medicion
