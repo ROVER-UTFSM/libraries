@@ -18,7 +18,7 @@ class xl_maxsonar_ez2100:
 
 	def __inti__(self):
 		# constantes
-		self.__pin_number = 31						# RPi 2 !
+		self.__pin_number = 39						# RPi 2 !
 		self.__const_distance_factor = 0.000058		# datasheet
 
 		# variable de resultados 
@@ -78,7 +78,7 @@ class xl_maxsonar_ez2100:
 
 if __name__ == "__main__":
 
-	gpio.setmode(gpio.BCM)
+	gpio.setmode(gpio.BOARD)
 	
 	sonar = xl_maxsonar_ez2100();
 
