@@ -14,8 +14,6 @@ class xl_maxsonar_ez2100:
 		El tiempo esta normalizado a segundos [s]. Se usa time.time() como base
 	"""
 
-	_medicion		# ultimo valor de medicion
-
 	def __inti__(self):
 		# constantes
 		__pin_number = 31						# RPi 2 !
