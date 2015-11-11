@@ -51,7 +51,7 @@ class xl_maxsonar_ez2100:
 
 if __name__ == "__main__":
 
-	gpio.setmode(GPIO.BCM)
+	gpio.setmode(gpio.BCM)
 	
 	sonar = xl_maxsonar_ez2100();
 
