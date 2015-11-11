@@ -26,7 +26,7 @@ class xl_maxsonar_ez2100:
 
 		# seteo de pines
 		gpio.setup(__pin_number, gpio.IN, pull_up_down=gpio.PUD_UP)
-		gpio.add_event_detect(31, gpio.FALLING, callback=self.actualizar)	# add bounce time ?
+		gpio.add_event_detect(__pin_number, gpio.FALLING, callback=self.actualizar)	# add bounce time ?
 		
 
 	def time_to_distance(self, time):
@@ -40,7 +40,7 @@ class xl_maxsonar_ez2100:
 	def actualizar(self):
 		time0 = time.time()
 
-		gpio.wait_for_edge(31, gpio.RISING)
+		gpio.wait_for_edge(__pin_number, gpio.RISING)
 
 		deltaT = time.time() - time0
 		self._medicion = time_to_distance(deltaT)
