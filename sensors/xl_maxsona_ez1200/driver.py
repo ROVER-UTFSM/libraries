@@ -48,6 +48,31 @@ class xl_maxsonar_ez2100:
 	def getDistance(self):
 		return self._medicion
 
+	# calibration methods
+
+	def generate_data(self):
+		try:
+			cm = int(raw_input("centimetros: "))
+			time_stamp = []
+
+			for i in range(1,10):
+				time0 = time.time()
+				gpio.wait_for_edge(__pin_number, gpio.RISING)
+				time_stamp.append(time.time() - time0)
+
+			return [cm, sum(time_stamp) / len(time_stamp)]
+
+		except:
+			# int() conversion problem
+			pass
+
+	def calibrate(self):
+		point = []
+		for i in range(1,10):
+			point.append(generate_data())
+
+		# mean-square
+
 
 
 if __name__ == "__main__":
@@ -60,4 +85,4 @@ if __name__ == "__main__":
 		time.sleep(1)
 		print("Medicion: " + str(sonar.getDistance()) )
 	
-	
+	gpio.cleanup()
