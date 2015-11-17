@@ -32,6 +32,6 @@ if __name__ == "__main__":
 	pwm.start(1)
 	for i in range(1, 99, 4):
 		pwm.ChangeDutyCycle(i)
-		time.sleep(0.5)
+		time.sleep(4)
 
 	GPIO.cleanup(12)
