@@ -30,9 +30,9 @@ if __name__ == "__main__":
 	"""
 
 	pwm.start(1)
-	for i in range(1, 99, 4):
+	for i in range(1, 99, 1):
 		pwm.ChangeDutyCycle(i)
 		print(str(i)+"%")
-		time.sleep(1)
+		input("")
 
 	GPIO.cleanup(12)
