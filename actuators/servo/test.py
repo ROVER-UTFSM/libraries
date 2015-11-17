@@ -28,7 +28,7 @@ if __name__ == "__main__":
 	pwm.stop()
 
 	pwm.start(1)
-	for i in range(1:99):
+	for i in range(1, 99):
 		pwm.ChangeDutyCycle(i)
 		sleep(0.1)
 
