@@ -21,7 +21,7 @@ if __name__ == "__main__":
 	pwm.ChangeDutyCycle(70)
 	print("70%")
 	time.sleep(2)
-	pwm.ChangeDutyCycle(100)
+	pwm.ChangeDutyCycle(90)
 	print("100%")
 	time.sleep(1)
 	pwm.stop()
