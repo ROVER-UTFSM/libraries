@@ -5,7 +5,7 @@ import time
 
 if __name__ == "__main__":
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(12, GPIO.OUT, initial=GPIO.LW)
+	GPIO.setup(12, GPIO.OUT, initial=GPIO.LOW)
 	pwm = GPIO.PWM(12, 666.666)
 	
 
