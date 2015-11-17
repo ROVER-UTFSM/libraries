@@ -5,7 +5,7 @@ import time
 
 if __name__ == "__main__":
 	GPIO.setmode(GPIO.BOARD)
-	#GPIO.setup(12, GPIO.OUT, initial=GPIO.LOW)
+	GPIO.setup(12, GPIO.OUT, initial=GPIO.LW)
 	pwm = GPIO.PWM(12, 666.666)
 	
 
@@ -23,6 +23,6 @@ if __name__ == "__main__":
 	pwm.ChangeDutyCycle(95)
 	print("90%")
 	time.sleep(1)
-	pwm.stop()
+	pwm.stop(	)
 
 	GPIO.cleanup(12)
