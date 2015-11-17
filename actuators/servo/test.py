@@ -9,7 +9,7 @@ if __name__ == "__main__":
 	pwm = GPIO.PWM(12, 666.666)
 	
 
-	pwm.start(1)
+	pwm.start(0)
 	pwm.ChangeDutyCycle(0)
 	print("0%")
 	time.sleep(2)
