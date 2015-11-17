@@ -10,6 +10,7 @@ if __name__ == "__main__":
 	
 
 	pwm.start(1)
+	pwm.ChangeDutyCycle(0)
 	print("0%")
 	time.sleep(2)
 	pwm.ChangeDutyCycle(10)
