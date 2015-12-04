@@ -13,7 +13,7 @@ volatile struct timespec t0, t1;				// t0: pulse start time t1: pulse end time
 volatile const clockid_t c = CLOCK_REALTIME;	// Real-time clock (not CPU time)
 
 /* Measurements */
-const int K_cm_to_ns = 58000					// Linear transformation : x[cm] = t[ns] / 58000
+const int K_cm_to_ns = 58000;					// Linear transformation : x[cm] = t[ns] / 58000
 
 
 /*** Definitions ***/
