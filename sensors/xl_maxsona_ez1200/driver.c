@@ -22,7 +22,7 @@ const int K_cm_to_ns = 58000;					// Linear transformation : x[cm] = t[ns] / 580
 void pulse_period(void);						// Both edge detection
 
 /* functions */
-long distance(long nanoseconds)					// f(t) : t[s] -> x[cm]
+long distance(long nanoseconds);					// f(t) : t[s] -> x[cm]
 
 
 int main(){
