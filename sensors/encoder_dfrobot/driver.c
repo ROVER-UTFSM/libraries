@@ -45,15 +45,18 @@ int main(){
 /* Pulse Interruption -- PIN 1 (12 BOARD) */
 void pulse_period(void){
 	/* Hipotesis : Despues de un canto de subida siempre sigue un canto de bajada :O */
+	float delta = 0.0;
 
 	if(last_timer){
 		clock_gettime(c, &t1);
-		printf("delta t : %.3f\n", t1.tv_sec-t0.tv_sec + (t1.tv_nsec - t0.tv_nsec)/1000000000.0);
+		delta = t1.tv_sec-t0.tv_sec + (t1.tv_nsec - t0.tv_nsec)/1000000000.0;
+		printf("delta t : %.3f[m] -> distancia : %.1f[cm]\n", delta, delta/0.000058);
 
 		last_timer = 0;		// t0 has the last time
 	}else{
 		clock_gettime(c, &t0);
-		printf("delta t : %.3f\n", t0.tv_sec-t1.tv_sec + (t0.tv_nsec - t1.tv_nsec)/1000000000.0);
+		delta = t0.tv_sec-t1.tv_sec + (t0.tv_nsec - t1.tv_nsec)/1000000000.0;
+		printf("delta t : %.3f[m] -> distancia : %.1f[cm]\n", delta, delta/0.000058);
 
 		last_timer = 1;		// t1 has the last time
 	}
