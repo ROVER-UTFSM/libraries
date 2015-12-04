@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <wiringPi.h>
 #include <time.h>
-#include <types.h>								// clockid_t
+#include <sys/types.h>								// clockid_t
 
 #define PIN 1									// PIN for encoderZ
 
