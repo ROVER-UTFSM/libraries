@@ -16,7 +16,7 @@ volatile int last_timer = 0;					// 0: t0 has last time measurment ; 1: t1 has l
 
 /* Measurements */
 const int n_ranuras   = 10;
-const float theta_min = 2*PI / (2.0*10);			// 2* when using both edges
+const float theta_min = 2.0*PI / (2*10);			// 2* when using both edges
 const float omega     = 0.0;
 
 /* Definitions */
@@ -50,13 +50,13 @@ void pulse_period(void){
 	if(last_timer){
 		clock_gettime(c, &t1);
 		delta = t1.tv_sec-t0.tv_sec + (t1.tv_nsec - t0.tv_nsec)/1000000000.0;
-		printf("delta t : %.3f[m] -> distancia : %.1f[cm]\n", delta, delta/0.000058);
+		printf("delta t : %.3f[m] -> velocidad : %.1f[cm/s]\n", delta, theta_min*4/delta);
 
 		last_timer = 0;		// t0 has the last time
 	}else{
 		clock_gettime(c, &t0);
 		delta = t0.tv_sec-t1.tv_sec + (t0.tv_nsec - t1.tv_nsec)/1000000000.0;
-		printf("delta t : %.3f[m] -> distancia : %.1f[cm]\n", delta, delta/0.000058);
+		printf("delta t : %.3f[m] -> velocidad : %.1f[cm/s]\n", delta, theta_min*4/delta);
 
 		last_timer = 1;		// t1 has the last time
 	}
