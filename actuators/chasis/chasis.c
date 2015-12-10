@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <time.h>
+#include <unistd.h>
+
 
 #include <wiringPi.h>
 
@@ -15,11 +16,10 @@ int main(){
 	pwmSetClock(PWM_CLOCK_DIVISOR);
 	pwmSetRange(PWM_RANGE);
 
-
-	int i=0;
+	int i;
 	for(i=0; i<PWM_RANGE; i+=20){
 		pwmWrite(PWM_PIN, i);
-		//usleep(10000);
+		usleep(10000);
 	}
 
 	/**/
