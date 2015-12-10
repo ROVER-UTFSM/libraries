@@ -4,6 +4,7 @@
 #include <sys/types.h>								// clockid_t
 
 #define PIN 1									// PIN for encoderZ
+#define EDGE_DETECTION INT_EDGE_BOTH
 
 
 /*** Global variables ***/
