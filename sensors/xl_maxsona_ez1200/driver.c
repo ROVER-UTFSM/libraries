@@ -28,7 +28,7 @@ long distance(long nanoseconds);					// f(t) : t[s] -> x[cm]
 int main(){
 	/* Wiring setups */
 	wiringPiSetup();
-	wiringPiISR(PIN, EDGE_DETECTION, &pulse_period);
+	wiringPiISR(PIN, INT_EDGE_BOTH, &pulse_period);
 	// TODO : capture errors
 
 	/* Clock setup */
