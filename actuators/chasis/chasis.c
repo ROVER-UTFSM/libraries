@@ -13,17 +13,15 @@ int main(){
 	pinMode(PWM_PIN, PWM_OUTPUT);
 	pwmSetMode(PWM_MODE_MS);
 	pwmSetClock(PWM_CLOCK_DIVISOR);
-	pwmSetrRange(PWM_RANGE);
+	pwmSetRange(PWM_RANGE);
 
 
-:POR_SIEMPRE
 	int i=0;
 	for(i=0; i<PWM_RANGE; i+=20){
 		pwmWrite(PWM_PIN, i);
-		usleep(10000);
+		//usleep(10000);
 	}
 
-	goto POR_SIEMPRE
 	/**/
 
 	return 0;
