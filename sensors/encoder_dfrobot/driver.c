@@ -1,26 +1,26 @@
 #include <stdio.h>
 #include <wiringPi.h>
 #include <time.h>
-#include <sys/types.h>						// for clockid_t
+#include <sys/types.h>							// for clockid_t
 
-#define PIN 1							// PIN for encoder
-#define EDGE_DETECTION INT_EDGE_BOTH				// Using both edges
+#define PIN 1									// PIN for encoder
+#define EDGE_DETECTION INT_EDGE_BOTH			// Using both edges
 #define PI 3.1415
 
 /*** Global variables ***/
 
 /* State of driver */
 volatile struct timespec t0, t1;
-volatile clockid_t c    = CLOCK_MONOTONIC;			// Real-time clock (not CPU time)
+volatile clockid_t c    = CLOCK_MONOTONIC;		// Real-time clock (not CPU time)
 volatile int last_timer = 0;					// 0: t0 has last time measurment ; 1: t1 has last time measurment
 
 /* Measurements */
 const int n_ranuras   = 10;
-const float theta_min = 2.0*PI / (2*10);			// 2* when using both edges
+const float theta_min = 2.0*PI / (2*10);		// 2* when using both edges
 const float omega     = 0.0;
 
 /* Definitions */
-void pulse_period(void);					// Interruption
+void pulse_period(void);						// Interruption
 
 
 int main(){
