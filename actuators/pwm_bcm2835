@@ -1,0 +1,6 @@
+PWM usa un reloj de 19.2[MHz]
+El divisor por defecto es 16, dejando el reloj en 1.2[MHz]
+El PWM tiene una resolución mínima (pensar como ranuras) en que se puede setear el valor en 0 o 1 lógico (para señal PWM)
+Mientras más ranuras se usan, teniendo más resoolución, el periodo de la señal PWM crece.
+Esto es, que modificando el divisor del reloj y el rango (% ancho de pulso. Usando rango como valor de control se tiene 100% dc) se modifica el periodo del PWM.
+1024 (indicado por el rango), obteniedose 1171,85[Hz] de frecuencia del pulso PWM.
